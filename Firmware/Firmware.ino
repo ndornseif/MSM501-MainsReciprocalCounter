@@ -1,4 +1,4 @@
-//MSM501-MainsReciprocalCounter Firmware version 1.6
+//MSM501-MainsReciprocalCounter Firmware version 1.0.6
 
 //Pin definitions
 //Counter output connections starting at Y0.
@@ -18,7 +18,7 @@ const byte SBUS1 = 11;
 const byte SBUS2 = 12;
 const byte SBUSE = 13;
 
-//Pin connected to the gateEnable signal out of the flipflop. Used to sense if main gate is open.
+//Pin connected to the gateEnable signal out of the flipflop. Senses if main gate is open. Currently unused.
 const byte ReadGateStatus = 17; 
 
 //LED to indicate whatever. Connected to the positive terminal of the status LED.
@@ -33,13 +33,13 @@ const float refClockFrequency = 1e6 * 1e6; //1MHz multiplied by 1e6 to convert f
 //Default time for a single measurment in ms.
 const unsigned long defaultGateTime = 60000;
 
-//Resets Reference and Signal Counters.
+//Resets reference and signal counters.
 void resetCounters(){
   digitalWrite(CounterClear,LOW);
   digitalWrite(CounterClear,HIGH);
 }
 
-//Latches the Reference and Signal Counter states in their internal registers.
+//Latches the reference and signal counter states in their internal registers.
 void latchCounters(){
   digitalWrite(CounterRegClock,HIGH);
   digitalWrite(CounterRegClock,LOW);
@@ -78,7 +78,7 @@ void setSBUS(byte index){
   digitalWrite(SBUSE, bitRead(index, 3));
 }
 
-//Measures the Frequency coming in averaged over gateTime (in ms) returns value in uHz.
+//Measures the mains frequency averaged over gateTime (in ms) returns value in uHz.
 unsigned long performMeasurement(unsigned long gateTime){
   resetCounters();
   digitalWrite(GateTime,HIGH);
@@ -96,7 +96,7 @@ void setup() {
   Serial.begin(115200);
   
   for(byte i = 0; i < 8; i++){
-    pinMode(CBUS[i], INPUT);
+      pinMode(CBUS[i], INPUT);
   }
 
   pinMode(ReadGateStatus,INPUT);
