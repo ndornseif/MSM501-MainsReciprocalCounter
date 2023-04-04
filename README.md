@@ -34,3 +34,5 @@ $measuredFreq = (signalCounterValue * referenceClockFrequency) / referenceCounte
 - TP10: External reference clock input.
 - TP11: Reference input to the main gate. Should show the same signal as TP10 or TP5 depending on JMP2 (Clock select).
 - TP12: Signal input to the main gate. (0-5V square wave with same frequency as mains)
+## Other
+Published under CERN-OHL-S license. 
