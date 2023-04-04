@@ -1,14 +1,12 @@
 # MSM501-MainsReciprocalCounter
-Measures the frequency of mains power. <br>
-Hardware version: 1.1
-Firmware version: 1.6
-
-
+Measures the frequency of mains power.  
+Hardware version: 1.1  
+Firmware version: 1.6  
 ## Overview
-This device was built as an exercise in digital electronics. It uses a reciprocal frequency counter approach to measure the frequency of the mains voltage supplying it. <br>
+This device was built as an exercise in digital electronics. It uses a reciprocal frequency counter approach to measure the frequency of the mains voltage supplying it.   
 Using two SN74LV8154N 32bit counters, it counts pulses of the mains signal and the reference clock. The start and end of measurement are syncronized to the input signal using a D-FlipFlop to open the main gate. 
-This eliminates the influence of gate time on the measurement resolution.<br>
-The measurement result is then calculated as follows: <br>
+This eliminates the influence of gate time on the measurement resolution.  
+The measurement result is then calculated as follows:  
 $measuredFreq = (signalCounterValue * referenceClockFrequency) / referenceCounterValue$
 ## Connectors/Headers
 - GND: Ground connection for scope ground clips.

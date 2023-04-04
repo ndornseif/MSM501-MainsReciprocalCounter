@@ -96,7 +96,7 @@ void setup() {
   Serial.begin(115200);
   
   for(byte i = 0; i < 8; i++){
-      pinMode(CBUS[i], INPUT);
+    pinMode(CBUS[i], INPUT);
   }
 
   pinMode(ReadGateStatus,INPUT);
