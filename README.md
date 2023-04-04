@@ -4,7 +4,7 @@ Hardware version: 1.1
 Firmware version: 1.6  
 ## Overview
 This device was built as an exercise in digital electronics. It uses a reciprocal frequency counter approach to measure the frequency of the mains voltage supplying it.   
-Using two SN74LV8154N 32bit counters, it counts pulses of the mains signal and the reference clock. The start and end of measurement are syncronized to the input signal using a D-FlipFlop to open the main gate. 
+Using two SN74LV8154N 32bit counters, it counts pulses of the mains signal and the reference clock. The start and end of measurement are syncronized to the input signal using a D-FlipFlop to open the main gate.  
 This eliminates the influence of gate time on the measurement resolution.  
 The measurement result is then calculated as follows:  
 $measuredFreq = (signalCounterValue * referenceClockFrequency) / referenceCounterValue$
@@ -21,7 +21,7 @@ $measuredFreq = (signalCounterValue * referenceClockFrequency) / referenceCounte
 - JMP2 (J4): Selects external or internal reference clock. Check TP11 for selected signal.
 ## Test points
 - TP1: Offset voltage to compensate for the clipping diode drop. (~ 500mV DC)
-- TP2: Divided and clipped transformer output voltage. (~ 4V~p~ half wave rectified sine)
+- TP2: Divided and clipped transformer output voltage. (~ 4V<sub>p</sub> half wave rectified sine)
 - TP3: Unregulated rectified and smoothed transformer voltage. (> 17V DC)
 - TP4: DC Supply rails. (+5V and +3.3V DC)
 - TP5: Reference oscillator signal. (1MHz or 10MHz 0-5V square wave)
