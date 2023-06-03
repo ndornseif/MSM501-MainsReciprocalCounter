@@ -39,6 +39,8 @@ Find a graph explaining the signal flow [here](Charts/Signalflow.pdf).
 - TP11: Reference input to the main gate. Should show the same signal as TP10 or TP5 depending on JMP2 (Clock select).
 - TP12: Signal input to the main gate. (0-5V square wave with same frequency as mains)
 
+## Trimmers
+- RP1:  Use this pot to adjust the voltage of the 5V rail.  
 
 ## Firmware 
 Find the firmware for this project in this [repository](https://github.com/ndornseif/MSM501-Firmware).  
