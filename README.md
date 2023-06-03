@@ -8,7 +8,7 @@ Using two SN74LV8154N 32bit counters, it counts pulses of the mains signal and t
 The start and end of measurement are syncronized to the input signal using a D-FlipFlop to open the main gate.  
 This eliminates the influence of gate time accuracy on the measurement.  
 The measurement result is then calculated as follows:  
-$measuredFreq = (signalCounterValue * referenceClockFrequency) / referenceCounterValue$   
+$measuredFreq = (n<sub>SignalCounter</sub> * f<sub>ref</sub>) / n<sub>RefCounter</sub>$   
 The measured value is send out over serial (J2).  
 Find a graph explaining the signal flow [here](Charts/Signalflow.pdf).
 
@@ -47,7 +47,7 @@ Find the firmware for this project in this [repository](https://github.com/ndorn
 You can just upload it using the official Arduino IDE onto the Arduino nano (U7).  
 Remove the Arduino from the board when uploading firmware.  
 Measurement results are in uHz and send out over serial.  
-They are send as ASCII and LF and CR seperated.  
+They are send as ASCII and LF, CR seperated.  
 Default parameters: 115200 baud, 8 data, 1 stop, no parity
 
 ## Example output
