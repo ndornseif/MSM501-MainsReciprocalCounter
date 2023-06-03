@@ -10,6 +10,7 @@ This eliminates the influence of gate time accuracy on the measurement.
 The measurement result is then calculated as follows:  
 $measuredFreq = (signalCounterValue * referenceClockFrequency) / referenceCounterValue$   
 The measured value is send out over serial (J2).  
+Find a graph explaining the signal flow [here](Charts/Signalflow.pdf).
 
 ## Connectors/Headers
 - GND: Ground connection for scope ground clips.
