@@ -8,7 +8,7 @@ Using two SN74LV8154N 32bit counters, it counts pulses of the mains signal and t
 The start and end of measurement are syncronized to the input signal using a D-FlipFlop to open the main gate.  
 This eliminates the influence of gate time accuracy on the measurement.  
 The measurement result is then calculated as follows:  
-$measuredFreq = (n<sub>SignalCounter</sub> * f<sub>ref</sub>) / n<sub>RefCounter</sub>$   
+$f_{measured} = \frac{n_{SignalCounter} \times f_{Ref}}{n_{RefCounter}}$   
 The measured value is send out over serial (J2).  
 Find a graph explaining the signal flow [here](Charts/Signalflow.pdf).
 
