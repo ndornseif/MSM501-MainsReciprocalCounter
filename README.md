@@ -47,20 +47,13 @@ Find the firmware for this project in this [repository](https://github.com/ndorn
 You can just upload it using the official Arduino IDE onto the Arduino nano (U7).  
 Remove the Arduino from the board when uploading firmware.  
 Measurement results are in uHz and send out over serial.  
-They are send as ASCII and newline seperated.  
+They are send as ASCII and LF and CR seperated.  
+Default parameters: 115200 baud, 8 data, 1 stop, no parity
 
 ## Example output
 ```
-50020548
-50032928
-50023432
-50028696
-50025960
-50033536
-50033924
-50007576
-49995952
-49995976
+50020548\r\n
+50032928\r\n
 ```
 
 ## Considerations
