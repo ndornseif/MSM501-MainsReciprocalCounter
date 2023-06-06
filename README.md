@@ -12,7 +12,7 @@ $f_{measured} = \frac{n_{SignalCounter}}{n_{RefCounter}} \times f_{Ref}$
 The measured value is send out over serial (J2).  
 Find a graph explaining the signal flow [here](Charts/Signalflow.pdf).
 
-## Board view
+## Board overview
 ![Topside of circuit board](Images/board_overview.png)
 
 ## Connectors/Headers
@@ -59,7 +59,6 @@ Default parameters: 115200 baud, 8 data, 1 stop, no parity
 ## Considerations
 Trying to power the Arduino through its USB header while the device is connected to mains is not recommended.  
 Use J2 (Serial) for communication while mains is applied.
-
 
 ## Other
 Published under CERN-OHL-S license. 
