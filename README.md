@@ -8,9 +8,12 @@ Using two SN74LV8154N 32bit counters, it counts pulses of the mains signal and t
 The start and end of measurement are syncronized to the input signal using a D-FlipFlop to open the main gate.  
 This eliminates the influence of gate time accuracy on the measurement.  
 The measurement result is then calculated as follows:  
-$f_{measured} = \frac{n_{SignalCounter} \times f_{Ref}}{n_{RefCounter}}$   
+$f_{measured} = \frac{n_{SignalCounter}}{n_{RefCounter}} \times f_{Ref}$   
 The measured value is send out over serial (J2).  
 Find a graph explaining the signal flow [here](Charts/Signalflow.pdf).
+
+## Board view
+![Topside of circuit board](Images/board_overview.png)
 
 ## Connectors/Headers
 - GND: Ground connection for scope ground clips.
@@ -50,11 +53,8 @@ Measurement results are in uHz and send out over serial.
 They are send as ASCII and LF, CR seperated.  
 Default parameters: 115200 baud, 8 data, 1 stop, no parity
 
-## Example output
-```
-50020548\r\n
-50032928\r\n
-```
+## Example data
+![Mains Frequency in Germany](Images/freq_23-06-03.png)
 
 ## Considerations
 Trying to power the Arduino through its USB header while the device is connected to mains is not recommended.  
